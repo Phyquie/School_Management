@@ -46,6 +46,9 @@ app.post('/addSchool', async (req, res) => {
 });
 
 // List Schools API
+app.get('/',async (req,res)=>{
+    res.send('Use /addSchool to add school and /listSchools to list schools');
+})
 app.get('/listSchools', async (req, res) => {
   const { latitude, longitude } = req.query;
 
